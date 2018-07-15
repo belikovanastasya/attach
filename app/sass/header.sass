@@ -1,0 +1,119 @@
+header
+  width: 100%
+  height: 170px
+  .container
+    height: 100%
+  .header_wrap
+    width: 100% 
+    height: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    .burger
+      width: 30px
+      height: 17px
+      position: relative
+      cursor: pointer
+      &.open
+        &:hover
+          span
+            &.top
+              width: 30px
+              
+            &.middle
+              width: 30px
+            &.bot 
+              width: 30px
+        span
+          &.top
+            top: calc(50% - 1px)
+            transform: rotate(45deg)
+            width: 30px
+          &.middle
+            opacity: 0
+          &.bot 
+            top: calc(50% - 1px)
+            transform: rotate(-45deg) 
+            width: 30px    
+      &:hover
+        span
+          &.top
+            width: 30px
+            
+          &.middle
+            width: 25px
+          &.bot 
+            width: 20px
+            
+      .circle
+        width: 45px
+        height: 45px
+        position: absolute
+        top: -12px
+        left: -6px   
+        svg
+          width: 95%
+          height: 95%   
+      span
+        position: absolute
+        width: 30px
+        height: 2px
+        background: $black
+        transition: all 0.5s ease
+        &.top
+          top: 0
+          left: 0
+          width: 25px
+        &.middle
+          top: calc(50% - 1px)
+          left: 0
+
+        &.bot
+          bottom: 0
+          left: 0 
+          width: 28px
+    .header_logo_wrap
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center  
+      width: 210px
+      height: 100px
+      .header_logo
+      span
+        text-align: center
+        text-transform: uppercase
+        font-size: 14px 
+        letter-spacing: 1px
+    .header_info
+      display: flex
+      flex-direction: row
+      align-items: center
+      .langs
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 70px
+        text-transform: uppercase
+        font-size: 14px
+        li
+          position: relative
+          &.active
+            &:after
+              @include pseudo
+              width: 100%
+              height: 2px
+              background: $black
+              bottom: -3px
+              left: 0
+
+      .userprofile
+        width: 18px
+        height: 18px
+        background: url('../img/user.svg')
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        margin-left: 30px            
